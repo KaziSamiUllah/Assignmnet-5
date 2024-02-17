@@ -1,7 +1,22 @@
 function changeInnerTextByID(elemetnID , Text){
 document.getElementById(elemetnID).textContent = Text;
 }
+function getValueById(ID){
+   var inputValue = document.getElementById(ID).value
+   return inputValue;
+}
 
+function addAttributeByID(ID, attribure){
+    document.getElementById(ID).classList.add = attribure;
+}
+function removeAttributeByID(ID, attribure){
+    document.getElementById(ID).classList.remove= attribure;
+}
+
+function discount(totalPrice , discountRate){
+    var discounted = totalPrice * discountRate * 0.01;
+    return discounted
+}
 
 
 

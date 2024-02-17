@@ -30,7 +30,7 @@
                         <!-- row 1 -->
                         <tr>
                             <th>A</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A1</button></td>
+                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100 ">A1</button></td>
                             <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A2</button></td>
                             <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A3</button></td>
                             <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A4</button></td>
@@ -115,23 +115,18 @@
                 <div> <!--Bill Table-->
                     <table id="bill-table" class="w-[22vw]  text-center">
                         <!-- row 1 -->
-                        <tr>
-                            <th>Seat</th>
+                        <tr class="text-xl">
+                            <th>Seat <span id="small-green" class="bg-green-500 rounded-lg align-super text-xs px-2">0</span></th>
                             <th>Class</th>
                             <th>Price</th>
                         </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <td>C2</td>
-                            <td>Economy</td>
-                            <td>550</td>
-                        </tr>
+                     
                     </table>
                     <hr class="border-red-600 ">
                 </div> <!--Total-->
                     <div class="flex justify-between w-4/5">
                         <h1 class="font-extrabold">Total:</h1>
-                        <h2>0</h2>
+                        <h2 id="total">0</h2>
                     </div>
                 
                 <div class="flex bg-white p-1.5 rounded-md w-11/12"> <!-- Coupon Section -->
@@ -155,7 +150,7 @@
             </div>
         </div>
     </section>
-
+    <script src="utility.js"></script>
     <script src="script.js" ></script>
 </body>
 

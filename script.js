@@ -14,37 +14,50 @@ var total = 0;
 var seatButtons = document.querySelectorAll(".seat");
 for (seat of seatButtons) {
     const seatNum = seat.innerText;
-    seat.addEventListener('click', function() {
-        this.classList.add('bg-green-200'); 
+    seat.addEventListener('click', function () {
+        this.classList.add('bg-green-200');
         // console.log(seat);
         addItemToBill(seatNum);
         totalTickets = totalTickets + 1;
         // console.log(totalTickets);
-        changeInnerTextByID('small-green' , totalTickets)
+        changeInnerTextByID('small-green', totalTickets)
         total = total + 550;
         changeInnerTextByID('total', total);
         this.disabled = true;
-        if(totalTickets >= 4){
+        if (totalTickets >= 4) {
             document.getElementById('coupon-field').disabled = false;
-            
+
         }
     }
     )
- 
+
 }
 
-function applyCoupon(){
+function applyCoupon() {
     const foundCoupon = getValueById('coupon-field');
     console.log(foundCoupon);
-    if(foundCoupon === new15Coupon){
+    if (foundCoupon === new15Coupon) {
         console.log('coupon matched')
-        discountPrice = discount(total , new15Rate)
+        let discountPrice = discount(total, new15Rate)
         console.log(discountPrice);
-        changeInnerTextByID()
+        changeInnerTextByID('discount-price', discountPrice);
+        removeAttributeByID('discountBox', 'hidden')
+        const grand = grandTotal(total , discountPrice)
+        changeInnerTextByID('grand-total', grand);
     }
-    else{
-        console.log('wrong input')
+    else if (foundCoupon === couple20Coupon) {
+        console.log('coupon matched')
+        let discountPrice = discount(total, couple20)
+        console.log(discountPrice);
+        changeInnerTextByID('discount-price', discountPrice);
+        removeAttributeByID('discountBox', 'hidden')
+        const grand = grandTotal(total , discountPrice)
+        changeInnerTextByID('grand-total', grand);
     }
+    else {
+        alert("please enter a valid Coupon")
+    }
+
 }
 
 

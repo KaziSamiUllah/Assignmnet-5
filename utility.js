@@ -6,17 +6,24 @@ function getValueById(ID){
    return inputValue;
 }
 
-function addAttributeByID(ID, attribure){
-    document.getElementById(ID).classList.add = attribure;
+function addAttributeByID(ID, attribute){
+    document.getElementById(ID).classList.add = attribute;
 }
-function removeAttributeByID(ID, attribure){
-    document.getElementById(ID).classList.remove= attribure;
+function removeAttributeByID(ID, attribute){
+    const element = document.getElementById(ID)
+    element.classList.remove(attribute);
+
 }
 
 function discount(totalPrice , discountRate){
     var discounted = totalPrice * discountRate * 0.01;
     return discounted
 }
+
+function grandTotal(total , discount){
+   let grand = total - discount;
+    return grand;
+};
 
 
 

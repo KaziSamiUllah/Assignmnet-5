@@ -30,7 +30,7 @@
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a>Home</a></li>
                         <li><a>About</a></li>
-                        <li><a>Destination</a></li>
+                        <li><a href="#booking">Destination</a></li>
                         <li><a>Search</a></li>
                     </ul>
                 </div>
@@ -40,13 +40,14 @@
                 <ul class="menu menu-horizontal px-1">
                     <li><a>Home</a></li>
                     <li><a>About</a></li>
-                    <li><a>Destination</a></li>
+                    <li><a href="#booking">Destination</a></li>
                     <li><a>Search</a></li>
                 </ul>
             </div>
-            <div class="navbar-end">
-                <div class="btn text-green-500 border-green-500 bg-green-100">
-                    <a href="#seat-booking-section">Bus</a><img src="images/bus-icon.png" alt="">
+            <div href="#booking" class="navbar-end">
+                <div  class="btn text-green-500 border-green-500 bg-green-100">
+                    <a href="#booking">Bus</a>
+                    <img src="images/bus-icon.png" alt="">
                 </div>
             </div>
         </div>
@@ -59,12 +60,12 @@
                         class="text-green-500">E</span>xpressVoyage</a></h1>
                 <p class="w-2/3 mx-auto">Where speed meets comfort, journeying to distant horizons with efficiency and
                     luxury. Experience seamless travel and explore new destinations with us. Safe travels await!</p>
-                <button class="btn bg-green-500 border-none">Buy Tickets</button>
+                <button href="#booking" class="btn bg-green-500 border-none">Buy Tickets</button>
             </div>
         </div>
     </section>
     <section> <!-- Coupon cards -->
-        <div >
+        <div>
             <h2 class="text-5xl font-bold text-center mb-5 justify-center">Best offers for you</h2>
             <div class="grid grid-cols-1 lg:flex gap-20 justify-center">
                 <div class="bg-yellow-300 flex gap-20 p-10 rounded-2xl w-full justify-around" id="new-15">
@@ -73,9 +74,9 @@
                         <p class="font-medium text-lg">on youe next purchase</p>
                         <p>use by January 2025</p>
                     </div>
-                    
+
                     <div class="my-auto">
-                        <h2  class="text-4xl font-bold my-2">NEW15</h2>
+                        <h2 class="text-4xl font-bold my-2">NEW15</h2>
                         <p class="text-lg">Coupon code</p>
                     </div>
                 </div>
@@ -85,7 +86,7 @@
                         <p class="font-medium text-lg">on youe next purchase</p>
                         <p>use by January 2025</p>
                     </div>
-                    
+
                     <div class=" my-auto">
                         <h2 class="text-4xl font-bold my-2">Couple 20</h2>
                         <p class="text-lg">Coupon code</p>
@@ -93,11 +94,11 @@
                 </div>
             </div>
             <div class="flex justify-center my-10">
-            <button class="btn text-green-500 border-green-500 text-center">See All Offers</button>
-        </div>
+                <button class="btn text-green-500 border-green-500 text-center">See All Offers</button>
+            </div>
         </div>
     </section>
-    <section id="seat-booking-section"> <!-- seat selector -->
+    <section id="booking"> <!-- seat selector -->
         <div class="flex">
             <div class="overflow-x-auto w-[75vw] "> <!--Ticket Table-->
                 <table class="table">
@@ -212,18 +213,24 @@
                     </table>
                     <hr class="border-red-600 ">
                 </div> <!--Total-->
-                <div class="flex justify-between w-4/5">
-                    <h1 class="font-extrabold">Total:</h1>
-                    <h2 id="total">0</h2>
-                </div>
+                <div class="w-full">
+                    <div class="flex justify-between w-4/5 mx-auto">
+                        <h1 class="font-extrabold">Total:</h1>
+                        <h2 id="total">0</h2>
+                    </div>
+                    <div id="discountBox" class="flex justify-between w-4/5 mx-auto hidden">
+                        <h1 class="font-extrabold">Discount:</h1>
+                        <h2 id="discount-price">0</h2>
+                    </div>
 
+                </div>
                 <div class="flex bg-white p-1.5 rounded-md w-11/12"> <!-- Coupon Section -->
                     <input id="coupon-field" type="text" placeholder="have any coupon?" class="w-full" disabled>
-                    <button onclick="applyCoupon()" id="apply-btn" class="bg-red-500 p-1.5 rounded-md" >Apply</button>
+                    <button onclick="applyCoupon()" id="apply-btn" class="bg-red-500 p-1.5 rounded-md">Apply</button>
                 </div>
                 <div class="flex justify-between w-4/5"> <!--Grand Total-->
                     <h1 class="font-extrabold">Grand Total:</h1>
-                    <h2>0</h2>
+                    <h2 id="grand-total">0</h2>
                 </div>
                 <form class=" flex-row w-11/12">
                     <h2>Passenger Name *</h2>

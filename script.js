@@ -21,7 +21,7 @@ for (seat of seatButtons) {
         addItemToBill(seatNum);
         totalTickets = totalTickets + 1;
         ticketLeft = ticketLeft - 1;
-        
+
         console.log(totalTickets);
         changeInnerTextByID('small-green', totalTickets)
         total = total + 550;
@@ -46,7 +46,7 @@ function applyCoupon() {
         console.log(discountPrice);
         changeInnerTextByID('discount-price', discountPrice);
         removeAttributeByID('discountBox', 'hidden')
-        const grand = grandTotal(total , discountPrice)
+        const grand = grandTotal(total, discountPrice)
         changeInnerTextByID('grand-total', grand);
     }
     else if (foundCoupon === couple20Coupon) {
@@ -55,7 +55,7 @@ function applyCoupon() {
         console.log(discountPrice);
         changeInnerTextByID('discount-price', discountPrice);
         removeAttributeByID('discountBox', 'hidden')
-        const grand = grandTotal(total , discountPrice)
+        const grand = grandTotal(total, discountPrice)
         changeInnerTextByID('grand-total', grand);
     }
     else {
@@ -79,20 +79,21 @@ function addItemToBill(item) {
     container.appendChild(newTableRow);
 }
 
-function ticketBooked(){
-  const nameInput = getValueById('name');
+function ticketBooked() {
+    const nameInput = getValueById('name');
     console.log(nameInput);
     const phoneInput = getValueById('phone');
     console.log(phoneInput);
     const emailInput = getValueById('email');
     console.log(emailInput);
-    if(nameInput && phoneInput && emailInput){
+    if (nameInput && phoneInput && emailInput) {
         console.log("good to go")
-        window.location.href ="/success.html"
+        addAttributeByID('main' , 'hidden')
+        removeAttributeByID('success', 'hidden')
     }
-    else{
-        console.log("check input")
-    }
-
+    else {
+        console.log("check input");
+        alert("Please enter the info in the form");
+}
 }
 

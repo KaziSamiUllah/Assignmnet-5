@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EXPRESSVOYAGE</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -15,264 +15,275 @@
 </head>
 
 <body class="mx-6 lg:mx-36">
-<main>
-    <nav> <!--NAV-->
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
+    <main id="main" class="">
+        <nav> <!--NAV-->
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a href="#booking">Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
                     </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <a class="text-xl uppercase"><span class="text-green-500">E</span>xpressVoyage</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
                         <li><a>Home</a></li>
                         <li><a>About</a></li>
                         <li><a href="#booking">Destination</a></li>
                         <li><a>Search</a></li>
                     </ul>
                 </div>
-                <a class="text-xl uppercase"><span class="text-green-500">E</span>xpressVoyage</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a href="#booking">Destination</a></li>
-                    <li><a>Search</a></li>
-                </ul>
-            </div>
-            <div href="#booking" class="navbar-end">
-                <div class="btn text-green-500 border-green-500 bg-green-100">
-                    <a href="#booking">Bus</a>
-                    <img src="images/bus-icon.png" alt="">
+                <div class="navbar-end">
+                    
+                <div class="navbar-end flex items-end">
+                        <a href="#booking" class="btn text-green-500 border-green-500 bg-green-100 ">
+                        <img src="images/bus-icon.png" alt="">
+                        Bus</a>
+    
                 </div>
             </div>
-        </div>
-    </nav>
-    <section> <!-- Banner -->
-        <div
-            class="bg-[url(images/banner.png)] h-[50vh] lg:h-[40vw] bg-cover bg-center bg-no-repeat text-center text-white flex align-middle justify-center items-center rounded-xl">
-            <div class="w-fit">
-                <h1 class=" text-white font-bold  text-3xl lg:text-6xl text-center">End-to-End Travel with <br><span
-                        class="text-green-500">E</span>xpressVoyage</a></h1>
-                <p class="w-2/3 mx-auto">Where speed meets comfort, journeying to distant horizons with efficiency
-                    and
-                    luxury. Experience seamless travel and explore new destinations with us. Safe travels await!</p>
-                <button href="#booking" class="btn bg-green-500 border-none">Buy Tickets</button>
-            </div>
-        </div>
-    </section>
-    <section> <!-- Coupon cards -->
-        <div>
-            <h2 class="text-5xl font-bold text-center mb-5 justify-center">Best offers for you</h2>
-            <div class="grid grid-cols-1 lg:flex gap-20 justify-center">
-                <div class="bg-yellow-300 flex gap-20 p-10 rounded-2xl w-full justify-around" id="new-15">
-                    <div>
-                        <h3 class="text-5xl font-extrabold my-5"><span>15</span>% OFF</h3>
-                        <p class="font-medium text-lg">on youe next purchase</p>
-                        <p>use by January 2025</p>
-                    </div>
-
-                    <div class="my-auto">
-                        <h2 class="text-4xl font-bold my-2">NEW15</h2>
-                        <p class="text-lg">Coupon code</p>
-                    </div>
-                </div>
-                <div class="bg-yellow-300 flex gap-20 p-10 rounded-2xl w-full justify-around" id="cpl-20">
-                    <div>
-                        <h3 class="text-5xl font-extrabold my-5"><span>20</span>% OFF</h3>
-                        <p class="font-medium text-lg">on youe next purchase</p>
-                        <p>use by January 2025</p>
-                    </div>
-
-                    <div class=" my-auto">
-                        <h2 class="text-4xl font-bold my-2">Couple 20</h2>
-                        <p class="text-lg">Coupon code</p>
-                    </div>
+        </nav>
+        <section> <!-- Banner -->
+            <div
+                class="bg-[url(images/banner.png)] h-[50vh] lg:h-[40vw] bg-cover bg-center bg-no-repeat text-center text-white flex align-middle justify-center items-center rounded-xl">
+                <div class="w-fit">
+                    <h1 class=" text-white font-bold  text-3xl lg:text-6xl text-center">End-to-End Travel with <br><span
+                            class="text-green-500">E</span>xpressVoyage</a></h1>
+                    <p class="w-2/3 mx-auto">Where speed meets comfort, journeying to distant horizons with efficiency
+                        and
+                        luxury. Experience seamless travel and explore new destinations with us. Safe travels await!</p>
+                        <a href="#booking">
+                        <button class="btn bg-green-500 border-none m-10">Buy Tickets</button>
+                    </a>
                 </div>
             </div>
-            <div class="flex justify-center my-10">
-                <button class="btn text-green-500 border-green-500 text-center">See All Offers</button>
-            </div>
-        </div>
-    </section>
-    <section> <!-- Coach Details-->
-        <div>
-            <div class="flex justify-between items-center">
-                <div class="flex gap-5">
-                    <img src="images/bus-logo.png" alt="">
-                    <div>
-                        <h1>Express Voyage</h1>
-                        <h2>Coach-010-WEB-Economy</h2>
+        </section>
+        <section> <!-- Coupon cards -->
+            <div>
+                <h2 class="text-5xl font-bold text-center mb-5 justify-center">Best offers for you</h2>
+                <div class="grid grid-cols-1 lg:flex gap-20 justify-center">
+                    <div class="bg-yellow-300 flex gap-20 p-10 rounded-2xl w-full justify-around" id="new-15">
+                        <div>
+                            <h3 class="text-5xl font-extrabold my-5"><span>15</span>% OFF</h3>
+                            <p class="font-medium text-lg">on youe next purchase</p>
+                            <p>use by January 2025</p>
+                        </div>
+
+                        <div class="my-auto">
+                            <h2 class="text-4xl font-bold my-2">NEW15</h2>
+                            <p class="text-lg">Coupon code</p>
+                        </div>
+                    </div>
+                    <div class="bg-yellow-300 flex gap-20 p-10 rounded-2xl w-full justify-around" id="cpl-20">
+                        <div>
+                            <h3 class="text-5xl font-extrabold my-5"><span>20</span>% OFF</h3>
+                            <p class="font-medium text-lg">on youe next purchase</p>
+                            <p>use by January 2025</p>
+                        </div>
+
+                        <div class=" my-auto">
+                            <h2 class="text-4xl font-bold my-2">Couple 20</h2>
+                            <p class="text-lg">Coupon code</p>
+                        </div>
                     </div>
                 </div>
-                <h3 class="bg-green-100 p-4 text-green-500 font-bold rounded-xl border-green-600 border-2"><Span
-                        id="ticket-left">40</Span> Seats left</h3>
+                <div class="flex justify-center my-10">
+                    <button class="btn text-green-500 border-green-500 text-center">See All Offers</button>
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="booking"> <!-- seat selector -->
-        <div class="flex-row lg:flex">
-            <div class="w-full lg:w-4/5"> <!--Ticket Table-->
-                <table class="table">
-                    <!-- head -->
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th class="flex w-[7vw] py-4 mx-4 rounded-xl bg-slate-400">
-                                <img class="mx-auto scale-150" src="images/wheel.png" alt="">
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- row 1 -->
-                        <tr>
-                            <th>A</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100 ">A1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A4</button></td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <th>B</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B4</button></td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <th>C</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C4</button></td>
-                        </tr>
-                        <!-- row 4 -->
-                        <tr>
-                            <th>D</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D4</button></td>
-                        </tr>
-                        <!-- row 5 -->
-                        <tr>
-                            <th>E</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E4</button></td>
-                        </tr>
-                        <!-- row 6 -->
-                        <tr>
-                            <th>F</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F4</button></td>
-                        </tr>
-                        <!-- row 7 -->
-                        <tr>
-                            <th>G</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G4</button></td>
-                        </tr>
-                        <!-- row 8 -->
-                        <tr>
-                            <th>H</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H4</button></td>
-                        </tr>
-                        <!-- row 9 -->
-                        <tr>
-                            <th>I</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I4</button></td>
-                        </tr>
-                        <!-- row 10 -->
-                        <tr>
-                            <th>J</th>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J1</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J2</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J3</button></td>
-                            <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J4</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+        </section>
+        <section> <!-- Coach Details-->
+            <div>
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-5">
+                        <img src="images/bus-logo.png" alt="">
+                        <div>
+                            <h1>Express Voyage</h1>
+                            <h2>Coach-010-WEB-Economy</h2>
+                        </div>
+                    </div>
+                    <h3 class="bg-green-100 p-4 text-green-500 font-bold rounded-xl border-green-600 border-2"><Span
+                            id="ticket-left">40</Span> Seats left</h3>
+                </div>
             </div>
-
-            <div class="flex-1 flex-row lg:justify-center bg-slate-100 rounded-xl p-10 "> <!--Billing Section-->
-                <h2 class="text-2xl font-bold mb-5 mx-auto">Select Your Seat</h2>
-                <div> <!--Bill Table-->
-                    <table id="bill-table" class=" bg-slate-300 w-full items-center text-center mb-5">
-                        <!-- row 1 -->
-                        <tr class="text-">
-                            <th>Seat <span id="small-green"
-                                    class="bg-green-500 rounded-lg align-super text-xs px-2">0</span></th>
-                            <th>Class</th>
-                            <th>Price</th>
-                        </tr>
-
+        </section>
+        <section id="booking"> <!-- seat selector -->
+            <div class="flex-row lg:flex">
+                <div class="w-full lg:w-4/5"> <!--Ticket Table-->
+                    <table class="table">
+                        <!-- head -->
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th class="flex w-[7vw] py-4 mx-4 rounded-xl bg-slate-400">
+                                    <img class="mx-auto scale-150" src="images/wheel.png" alt="">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                                <th>A</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100 ">A1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A4</button></td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <th>B</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B4</button></td>
+                            </tr>
+                            <!-- row 3 -->
+                            <tr>
+                                <th>C</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C4</button></td>
+                            </tr>
+                            <!-- row 4 -->
+                            <tr>
+                                <th>D</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D4</button></td>
+                            </tr>
+                            <!-- row 5 -->
+                            <tr>
+                                <th>E</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E4</button></td>
+                            </tr>
+                            <!-- row 6 -->
+                            <tr>
+                                <th>F</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F4</button></td>
+                            </tr>
+                            <!-- row 7 -->
+                            <tr>
+                                <th>G</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G4</button></td>
+                            </tr>
+                            <!-- row 8 -->
+                            <tr>
+                                <th>H</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H4</button></td>
+                            </tr>
+                            <!-- row 9 -->
+                            <tr>
+                                <th>I</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I4</button></td>
+                            </tr>
+                            <!-- row 10 -->
+                            <tr>
+                                <th>J</th>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J1</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J2</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J3</button></td>
+                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J4</button></td>
+                            </tr>
+                        </tbody>
                     </table>
-                    <hr class="bg-slate-700 ">
-                </div> <!--Total-->
-                <div class="w-full">
-                    <div class="flex justify-between  w-4/5  mx-auto mb-5">
-                        <h1 class="font-extrabold">Total:</h1>
-                        <h2 id="total">0</h2>
+                </div>
+
+                <div class="flex-1 flex-row lg:justify-center bg-slate-100 rounded-xl p-10 "> <!--Billing Section-->
+                    <h2 class="text-2xl font-bold mb-5 mx-auto">Select Your Seat</h2>
+                    <div> <!--Bill Table-->
+                        <table id="bill-table" class=" bg-slate-300 w-full items-center text-center mb-5">
+                            <!-- row 1 -->
+                            <tr class="text-">
+                                <th>Seat <span id="small-green"
+                                        class="bg-green-500 rounded-lg align-super text-xs px-2">0</span></th>
+                                <th>Class</th>
+                                <th>Price</th>
+                            </tr>
+
+                        </table>
+                        <hr class="bg-slate-700 ">
+                    </div> <!--Total-->
+                    <div class="w-full">
+                        <div class="flex justify-between  w-4/5  mx-auto mb-5">
+                            <h1 class="font-extrabold">Total:</h1>
+                            <h2 id="total">0</h2>
+                        </div>
+                        <div id="discountBox" class="flex justify-between w-4/5 mx-auto hidden mb-5">
+                            <h1 class="font-extrabold">Discount:</h1>
+                            <h2 id="discount-price">0</h2>
+                        </div>
+
                     </div>
-                    <div id="discountBox" class="flex justify-between w-4/5 mx-auto hidden mb-5">
-                        <h1 class="font-extrabold">Discount:</h1>
-                        <h2 id="discount-price">0</h2>
+                    <div class="flex bg-white p-1.5 rounded-md w-full mb-5"> <!-- Coupon Section -->
+                        <input id="coupon-field" type="text" placeholder="have any coupon?" class="w-full" disabled>
+                        <button onclick="applyCoupon()" id="apply-btn"
+                            class="bg-red-500 p-1 rounded-md text-white font-bold">Apply</button>
                     </div>
+                    <div class="flex justify-between  w-4/5  mx-auto mb-5"> <!--Grand Total-->
+                        <h1 class="font-extrabold">Grand Total:</h1>
+                        <h2 id="grand-total">0</h2>
+                    </div>
+                    <form class="flex-row w-full"> <!--Passenger Info-->
+                        <h2>Passenger Name<span class="text-red-500">*</span></h2>
+                        <input id="name" class="w-full p-1 my-1 rounded-md bg-slate-200" type="text"
+                            placeholder="Enter Your Name">
+
+                        <h2>Phone Number <span class="text-red-500">*</span></h2>
+                        <input id="phone" class="w-full p-1 my-1 rounded-md bg-slate-200" type="number"
+                            placeholder="Enter your phone numbe">
+
+                        <h2>Email ID<span class="text-red-500">*</span></h2>
+                        <input id="email" class="w-full p-1 my-1 rounded-md bg-slate-200 mb-5" type="email" name=""
+                            placeholder="Enter your email id">
+                        <button type="submit" onclick="ticketBooked()"
+                            class="bg-green-500 w-full  rounded-md py-3 text-2xl font-bold text-white">Next</button>
+                    </form>
 
                 </div>
-                <div class="flex bg-white p-1.5 rounded-md w-full mb-5"> <!-- Coupon Section -->
-                    <input id="coupon-field" type="text" placeholder="have any coupon?" class="w-full" disabled>
-                    <button onclick="applyCoupon()" id="apply-btn"
-                        class="bg-red-500 p-1 rounded-md text-white font-bold">Apply</button>
-                </div>
-                <div class="flex justify-between  w-4/5  mx-auto mb-5"> <!--Grand Total-->
-                    <h1 class="font-extrabold">Grand Total:</h1>
-                    <h2 id="grand-total">0</h2>
-                </div>
-                <form class="flex-row w-full"> <!--Passenger Info-->
-                    <h2>Passenger Name<span class="text-red-500">*</span></h2>
-                    <input id="name" class="w-full p-1 my-1 rounded-md bg-slate-200" type="text"
-                        placeholder="Enter Your Name">
-
-                    <h2>Phone Number <span class="text-red-500">*</span></h2>
-                    <input id="phone" class="w-full p-1 my-1 rounded-md bg-slate-200" type="number"
-                        placeholder="Enter your phone numbe">
-
-                    <h2>Email ID<span class="text-red-500">*</span></h2>
-                    <input id="email" class="w-full p-1 my-1 rounded-md bg-slate-200 mb-5" type="email" name=""
-                        placeholder="Enter your email id">
-                    <button type="submit" onclick="ticketBooked() "
-                        class="bg-green-500 w-full  rounded-md py-3 text-2xl font-bold text-white">Next</button>
-                </form>
-
             </div>
+        </section>
+    </main>
+    <section id="success" class="hidden">
+        <div>
+            <H1 class="text-7xl font-extrabold">Success</H1>
         </div>
     </section>
-</main>
+
 
     <script src="utility.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

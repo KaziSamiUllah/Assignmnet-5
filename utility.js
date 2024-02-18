@@ -12,12 +12,13 @@ function getValueById(ID){
    return inputValue;
 }
 
-function addAttributeByID(ID, attribute){
-    document.getElementById(ID).classList.add = attribute;
+function addAttributeByID(ID1, attribute1){
+    const element = document.getElementById(ID1);
+    element.classList.add(attribute1);
 }
-function removeAttributeByID(ID, attribute){
-    const element = document.getElementById(ID)
-    element.classList.remove(attribute);
+function removeAttributeByID(ID2, attribute2){
+    const element = document.getElementById(ID2)
+    element.classList.remove(attribute2);
 
 }
 

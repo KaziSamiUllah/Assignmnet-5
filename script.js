@@ -3,13 +3,14 @@ const new15Rate = document.getElementById('new-15').childNodes[1].childNodes[1].
 const new15Coupon = document.getElementById('new-15').childNodes[3].childNodes[1].innerText;
 const couple20 = document.getElementById('cpl-20').childNodes[1].childNodes[1].childNodes[0].innerText;
 const couple20Coupon = document.getElementById('cpl-20').childNodes[3].childNodes[1].innerText;
-
 const apply = document.getAnimations('apply-btn')
 
 
 
 
 var totalTickets = 0;
+var ticketLeft = getInnerTextById('ticket-left');
+console.log(ticketLeft);
 var total = 0;
 var seatButtons = document.querySelectorAll(".seat");
 for (seat of seatButtons) {
@@ -19,14 +20,17 @@ for (seat of seatButtons) {
         // console.log(seat);
         addItemToBill(seatNum);
         totalTickets = totalTickets + 1;
-        // console.log(totalTickets);
+        ticketLeft = ticketLeft - 1;
+        
+        console.log(totalTickets);
         changeInnerTextByID('small-green', totalTickets)
         total = total + 550;
         changeInnerTextByID('total', total);
+        changeInnerTextByID('grand-total', total)
+        changeInnerTextByID('ticket-left', ticketLeft);
         this.disabled = true;
         if (totalTickets >= 4) {
             document.getElementById('coupon-field').disabled = false;
-
         }
     }
     )
@@ -60,8 +64,6 @@ function applyCoupon() {
 
 }
 
-
-
 function addItemToBill(item) {
     var container = document.getElementById('bill-table')
     var newTableRow = document.createElement('tr')
@@ -74,6 +76,23 @@ function addItemToBill(item) {
     newTableRow.appendChild(seatID);
     newTableRow.appendChild(seatClass);
     newTableRow.appendChild(fare);
-    container.appendChild(newTableRow)
+    container.appendChild(newTableRow);
+}
+
+function ticketBooked(){
+  const nameInput = getValueById('name');
+    console.log(nameInput);
+    const phoneInput = getValueById('phone');
+    console.log(phoneInput);
+    const emailInput = getValueById('email');
+    console.log(emailInput);
+    if(nameInput && phoneInput && emailInput){
+        console.log("good to go")
+        window.location.href ="/success.html"
+    }
+    else{
+        console.log("check input")
+    }
+
 }
 

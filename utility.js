@@ -1,6 +1,12 @@
 function changeInnerTextByID(elemetnID , Text){
 document.getElementById(elemetnID).textContent = Text;
 }
+function getInnerTextById(ID){
+    const text = document.getElementById(ID).innerText;
+    return text;
+}
+
+
 function getValueById(ID){
    var inputValue = document.getElementById(ID).value
    return inputValue;
@@ -25,6 +31,16 @@ function grandTotal(total , discount){
     return grand;
 };
 
+
+// function ifInputExist(inputID){
+//     var input = document.getElementById(inputID).value;
+//     if(input){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
 
 
 // //  var button = document.getElementById("toggleButton");

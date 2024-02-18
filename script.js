@@ -13,28 +13,33 @@ var ticketLeft = getInnerTextById('ticket-left');
 console.log(ticketLeft);
 var total = 0;
 var seatButtons = document.querySelectorAll(".seat");
+
 for (seat of seatButtons) {
     const seatNum = seat.innerText;
-    seat.addEventListener('click', function () {
+    seat.addEventListener('click', function clickhandler() {
         this.classList.add('bg-green-200');
         // console.log(seat);
         addItemToBill(seatNum);
-        totalTickets = totalTickets + 1;
-        ticketLeft = ticketLeft - 1;
-
+        totalTickets++ 
+        ticketLeft++;
         console.log(totalTickets);
+
         changeInnerTextByID('small-green', totalTickets)
         total = total + 550;
         changeInnerTextByID('total', total);
         changeInnerTextByID('grand-total', total)
         changeInnerTextByID('ticket-left', ticketLeft);
         this.disabled = true;
+
         if (totalTickets >= 4) {
             document.getElementById('coupon-field').disabled = false;
         }
+    
     }
     )
-
+    if(totalTickets > 4){
+        seat.removeAttributeByID('click',clickhandler);
+    }
 }
 
 function applyCoupon() {
@@ -48,6 +53,7 @@ function applyCoupon() {
         removeAttributeByID('discountBox', 'hidden')
         const grand = grandTotal(total, discountPrice)
         changeInnerTextByID('grand-total', grand);
+        addAttributeByID('couponBox', 'hidden')
     }
     else if (foundCoupon === couple20Coupon) {
         console.log('coupon matched')
@@ -57,6 +63,8 @@ function applyCoupon() {
         removeAttributeByID('discountBox', 'hidden')
         const grand = grandTotal(total, discountPrice)
         changeInnerTextByID('grand-total', grand);
+        addAttributeByID('couponBox', 'hidden')
+        
     }
     else {
         alert("please enter a valid Coupon")
@@ -79,21 +87,67 @@ function addItemToBill(item) {
     container.appendChild(newTableRow);
 }
 
-function ticketBooked() {
+
+
+function openModal() {
     const nameInput = getValueById('name');
     console.log(nameInput);
     const phoneInput = getValueById('phone');
     console.log(phoneInput);
     const emailInput = getValueById('email');
     console.log(emailInput);
+   
     if (nameInput && phoneInput && emailInput) {
         console.log("good to go")
-        addAttributeByID('main' , 'hidden')
-        removeAttributeByID('success', 'hidden')
+        document.getElementById('my_modal_7').checked = true;
     }
-    else {
-        console.log("check input");
-        alert("Please enter the info in the form");
-}
-}
+ }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // function ticketBooked() {
+//     const nameInput = getValueById('name');
+//     console.log(nameInput);
+//     const phoneInput = getValueById('phone');
+//     console.log(phoneInput);
+//     const emailInput = getValueById('email');
+//     console.log(emailInput);
+//     if (nameInput && phoneInput && emailInput) {
+//         console.log("good to go")
+//     }
+//     else {
+//         console.log("check input");
+//         alert("Please enter the info in the form");
+
+// }
+// }
+
+
+//    const nameInput = getValueById('name');
+//     console.log(nameInput);
+//     const phoneInput = getValueById('phone');
+//     console.log(phoneInput);
+//     const emailInput = getValueById('email');
+//     console.log(emailInput);
+//     if (!nameInput || !phoneInput || !emailInput) {
+//         console.log("check input");
+//         alert("Please enter the info in the form");
+
+//     } 
+
+
+
+
+ 

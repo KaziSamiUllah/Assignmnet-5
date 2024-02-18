@@ -46,14 +46,14 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    
-                <div class="navbar-end flex items-end">
+
+                    <div class="navbar-end flex items-end">
                         <a href="#booking" class="btn text-green-500 border-green-500 bg-green-100 ">
-                        <img src="images/bus-icon.png" alt="">
-                        Bus</a>
-    
+                            <img src="images/bus-icon.png" alt="">
+                            Bus</a>
+
+                    </div>
                 </div>
-            </div>
         </nav>
         <section> <!-- Banner -->
             <div
@@ -64,7 +64,7 @@
                     <p class="w-2/3 mx-auto">Where speed meets comfort, journeying to distant horizons with efficiency
                         and
                         luxury. Experience seamless travel and explore new destinations with us. Safe travels await!</p>
-                        <a href="#booking">
+                    <a href="#booking">
                         <button class="btn bg-green-500 border-none m-10">Buy Tickets</button>
                     </a>
                 </div>
@@ -86,7 +86,8 @@
                             <p class="text-lg">Coupon code</p>
                         </div>
                     </div>
-                    <div class="bg-yellow-300 flex gap-20 p-10 rounded-2xl w-full justify-around" id="cpl-20">
+                    <div class="bg-pink-500                   flex gap-20 p-10 rounded-2xl w-full justify-around"
+                        id="cpl-20">
                         <div>
                             <h3 class="text-5xl font-extrabold my-5"><span>20</span>% OFF</h3>
                             <p class="font-medium text-lg">on youe next purchase</p>
@@ -105,17 +106,46 @@
             </div>
         </section>
         <section> <!-- Coach Details-->
-            <div>
-                <div class="flex justify-between items-center">
-                    <div class="flex gap-5">
-                        <img src="images/bus-logo.png" alt="">
-                        <div>
-                            <h1>Express Voyage</h1>
-                            <h2>Coach-010-WEB-Economy</h2>
+            <div class="flex gap-10">
+                <div class="w-3/4">
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-5">
+                            <img src="images/bus-logo.png" alt="">
+                            <div>
+                                <h1 class="text-3xl font-bold">Express Voyage</h1>
+                                <h2 class="text-lg">Coach-010-WEB-Economy</h2>
+                            </div>
+                        </div>
+                        <div class="flex bg-green-100 p-4 text-green-500 font-bold rounded-xl border-green-600 border-none gap-2 justify-center items-center">
+                            <img src="images/seat-green.png" alt="">
+                            <h3 class="">
+                                <Span id="ticket-left">40</Span> Seats left</h3>
                         </div>
                     </div>
-                    <h3 class="bg-green-100 p-4 text-green-500 font-bold rounded-xl border-green-600 border-2"><Span
-                            id="ticket-left">40</Span> Seats left</h3>
+                    <div class="border-none p-8 font-medium rounded-3xl mt-10 bg-slate-100 ">
+                        <div class="flex justify-between my-2 text-lg">
+                            <h2>Route</h2>
+                            <h2>Dhaka - Sylhet</h2>
+                        </div>
+                        <hr>
+                        <div class="flex justify-between my-2">
+                            <h2>Departure Time</h2>
+                            <h2>9:00 PM</h2>
+                        </div>
+                        <hr>
+                        <div class="flex justify-between my-2 font-bold">
+                            <h2 class="p-5 bg-slate-200 rounded-xl w-1/4 text-center">Boarding Point - Laxmipur</h2>
+                            <h2 class="p-5 bg-slate-200 rounded-xl w-1/4 text-center">Dropping Point - Bogura</h2>
+                            <h2 class="p-5 bg-slate-200 rounded-xl w-1/4 text-center">Est. Time - 11 Hour</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full flex justify-center items-center">
+                    <div class="text-center items-center           h-fit">
+                        <img class="mx-auto mb-5" src="images/fare.png" alt="">
+                        <h1 class="font-extrabold text-4xl mb-3"><span>550</span>Taka</h1>
+                        <h2 class="text-3xl">Per Seat</h2>
+                    </div>
                 </div>
             </div>
         </section>
@@ -223,7 +253,7 @@
                 <div class="flex-1 flex-row lg:justify-center bg-slate-100 rounded-xl p-10 "> <!--Billing Section-->
                     <h2 class="text-2xl font-bold mb-5 mx-auto">Select Your Seat</h2>
                     <div> <!--Bill Table-->
-                        <table id="bill-table" class=" bg-slate-300 w-full items-center text-center mb-5">
+                        <table id="bill-table" class=" bg-slate-50 w-full items-center text-center mb-5">
                             <!-- row 1 -->
                             <tr class="text-">
                                 <th>Seat <span id="small-green"
@@ -246,7 +276,7 @@
                         </div>
 
                     </div>
-                    <div class="flex bg-white p-1.5 rounded-md w-full mb-5"> <!-- Coupon Section -->
+                    <div id="couponBox" class="flex bg-white p-1.5 rounded-md w-full mb-5"> <!-- Coupon Section -->
                         <input id="coupon-field" type="text" placeholder="have any coupon?" class="w-full" disabled>
                         <button onclick="applyCoupon()" id="apply-btn"
                             class="bg-red-500 p-1 rounded-md text-white font-bold">Apply</button>
@@ -258,29 +288,42 @@
                     <form class="flex-row w-full"> <!--Passenger Info-->
                         <h2>Passenger Name<span class="text-red-500">*</span></h2>
                         <input id="name" class="w-full p-1 my-1 rounded-md bg-slate-200" type="text"
-                            placeholder="Enter Your Name">
+                            placeholder="Enter Your Name" required>
 
                         <h2>Phone Number <span class="text-red-500">*</span></h2>
                         <input id="phone" class="w-full p-1 my-1 rounded-md bg-slate-200" type="number"
-                            placeholder="Enter your phone numbe">
+                            placeholder="Enter your phone numbe" required>
 
                         <h2>Email ID<span class="text-red-500">*</span></h2>
                         <input id="email" class="w-full p-1 my-1 rounded-md bg-slate-200 mb-5" type="email" name=""
-                            placeholder="Enter your email id">
-                        <button type="submit" onclick="ticketBooked()"
+                            placeholder="Enter your email id" required>
+
+                        <button type="submit" onclick="openModal()"
                             class="bg-green-500 w-full  rounded-md py-3 text-2xl font-bold text-white">Next</button>
+                        <!--                        
+                        <label for="my_modal_7"  onclick="ticketBooked()"   
+                          class="btn bg-green-500 text-center mx-auto w-full text-white text-xl">Place Order</label> -->
                     </form>
 
                 </div>
             </div>
         </section>
     </main>
-    <section id="success" class="hidden">
-        <div>
-            <H1 class="text-7xl font-extrabold">Success</H1>
+    <input type="checkbox" id="my_modal_7" class=" modal-toggle" />
+    <div id="modalBox" class="modal" role="dialog">
+        <div class="modal-box flex-row justify-center text-center">
+            <div class="flex-row justify-center items-center">
+                <img class="mx-auto my-5" src="images/success.png" alt="">
+                <h2 class="text-green-500">SUCCESS</h2>
+                <p class="my-2">Thank you for Booking Our Bus Seats.
+                    We are working hard to find the best service and deals for you.
+                </p>
+                <p class="font-light">Shortly you will find a confirmation in your email.</p>
+                <button onclick="location.reload()" class="btn my-2 bg-green-500" for="my_modal_7">Close</button>
+            </div>
         </div>
-    </section>
 
+    </div>
 
     <script src="utility.js"></script>
     <script src="script.js"></script>

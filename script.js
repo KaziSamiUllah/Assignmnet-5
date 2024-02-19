@@ -41,6 +41,7 @@ for (seat of seatButtons) {
         }
         if(totalTickets === 4){
             document.getElementById('coupon-field').disabled = false;
+            document.getElementById('apply-btn').disabled = false;
         }
 
     }
@@ -75,7 +76,9 @@ function applyCoupon() {
 
     }
     else {
-        alert("please enter a valid Coupon")
+        alert("please enter a valid Coupon");
+        document.getElementById('coupon-field').value = '';
+
     }
 
 }
@@ -109,6 +112,7 @@ function openModal() {
         if (nameInput && phoneInput && emailInput) {
             console.log("good to go")
             document.getElementById('my_modal_7').checked = true;
+            
         }
         else{
             alert('Please fill out the fields')

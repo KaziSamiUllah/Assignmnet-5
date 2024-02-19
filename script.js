@@ -16,13 +16,18 @@ var seatButtons = document.querySelectorAll(".seat");
 
 for (seat of seatButtons) {
     const seatNum = seat.innerText;
-    seat.addEventListener('click', function clickhandler() {
-        this.classList.add('bg-green-200');
+    seat.addEventListener('click', function () {
+        
+        // this.classList.add('bg-green-200');
         // console.log(seat);
-        addItemToBill(seatNum);
+        // addItemToBill(seatNum);
         totalTickets++ 
-        ticketLeft++;
+        ticketLeft--;
         console.log(totalTickets);
+
+        if(totalTickets<=4){
+            this.classList.add('bg-green-200');
+            addItemToBill(seatNum);
 
         changeInnerTextByID('small-green', totalTickets)
         total = total + 550;
@@ -30,6 +35,7 @@ for (seat of seatButtons) {
         changeInnerTextByID('grand-total', total)
         changeInnerTextByID('ticket-left', ticketLeft);
         this.disabled = true;
+        }
 
         if (totalTickets >= 4) {
             document.getElementById('coupon-field').disabled = false;

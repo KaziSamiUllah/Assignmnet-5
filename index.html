@@ -9,12 +9,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         section {
-            margin-bottom: 50px;
+            margin-bottom: 120px;
         }
     </style>
 </head>
 
-<body class="mx-6 lg:mx-36">
+<body>
     <main id="main" class="">
         <nav> <!--NAV-->
             <div class="navbar bg-base-100">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
         </nav>
-        <section> <!-- Banner -->
+        <section class="mx-6 md:mx-10 lg:mx-36"> <!-- Banner -->
             <div
                 class="bg-[url(images/banner.png)] h-[50vh] lg:h-[40vw] bg-cover bg-center bg-no-repeat text-center text-white flex align-middle justify-center items-center rounded-xl">
                 <div class="w-fit">
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </section>
-        <section> <!-- Coupon cards -->
+        <section class="mx-6 md:mx-10 lg:mx-36"> <!-- Coupon cards -->
             <div>
                 <h2 class="text-5xl font-bold text-center mb-5 justify-center">Best offers for you</h2>
                 <div class="grid grid-cols-1 lg:flex gap-20 justify-center">
@@ -105,8 +105,13 @@
                 </div>
             </div>
         </section>
-        <section> <!-- Coach Details-->
-            <div class="flex-row lg:flex gap-10">
+        <section id="booking" class="px-6 lg:px-36 bg-[#F7F8F8] border-t-4 border-[#1DD100] rounded-[40px] lg:rounded-[80px] pt-10 lg:pt-28"> <!-- Coach Details-->
+            <div class="text-center flex-row">
+                <h1 class="font-extrabold text-4xl mb-5 ">EXPRESSVOYAGE</h1>
+                <p class=" mx-auto w-3/5 lg:w-full">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+            <div class="mt-8"></div>
+            <div class="flex-row lg:flex gap- 10 border-none p-8 font-medium rounded-3xl  bg-white py-20 my-10">
                 <div class="lg:w-3/4">
                     <div class="flex-row lg:flex justify-between items-center">
                         <div class="flex gap-5">
@@ -124,7 +129,7 @@
                             </h3>
                         </div>
                     </div>
-                    <div class="border-none p-8 font-medium rounded-3xl mt-10 bg-slate-100 ">
+                    <div >
                         <div class="flex justify-between my-2 text-lg">
                             <h2>Route</h2>
                             <h2>Dhaka - Sylhet</h2>
@@ -145,168 +150,209 @@
                 <div class="flex my-10 lg:flex-1 w-full  justify-center items-center">
                     <div class="text-center items-center           h-fit">
                         <img class="mx-auto mb-5" src="images/fare.png" alt="">
-                        <h1 class="font-extrabold text-4xl mb-3"><span>550</span>Taka</h1>
+                        <h1 class="font-extrabold text-4xl mb-3"><span id="per-ticket">550</span>Taka</h1>
                         <h2 class="text-3xl">Per Seat</h2>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="booking"> <!-- seat selector -->
-            <div class="flex-row lg:flex">
-                <div class="w-full lg:w-4/5"> <!--Ticket Table-->
-                    <table class="table">
-                        <!-- head -->
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th class="flex w-[7vw] py-4 mx-4 rounded-xl bg-slate-400">
-                                    <img class="mx-auto scale-150" src="images/wheel.png" alt="">
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- row 1 -->
-                            <tr>
-                                <th>A</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100 ">A1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A4</button></td>
-                            </tr>
-                            <!-- row 2 -->
-                            <tr>
-                                <th>B</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B4</button></td>
-                            </tr>
-                            <!-- row 3 -->
-                            <tr>
-                                <th>C</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C4</button></td>
-                            </tr>
-                            <!-- row 4 -->
-                            <tr>
-                                <th>D</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D4</button></td>
-                            </tr>
-                            <!-- row 5 -->
-                            <tr>
-                                <th>E</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E4</button></td>
-                            </tr>
-                            <!-- row 6 -->
-                            <tr>
-                                <th>F</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F4</button></td>
-                            </tr>
-                            <!-- row 7 -->
-                            <tr>
-                                <th>G</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G4</button></td>
-                            </tr>
-                            <!-- row 8 -->
-                            <tr>
-                                <th>H</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H4</button></td>
-                            </tr>
-                            <!-- row 9 -->
-                            <tr>
-                                <th>I</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I4</button></td>
-                            </tr>
-                            <!-- row 10 -->
-                            <tr>
-                                <th>J</th>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J1</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J2</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J3</button></td>
-                                <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J4</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div> <!-- seat selector -->
 
-                <div class="flex-1 flex-row lg:justify-center bg-slate-100 rounded-xl p-10 "> <!--Billing Section-->
-                    <h2 class="text-2xl font-bold mb-5 mx-auto">Select Your Seat</h2>
-                    <div> <!--Bill Table-->
-                        <table id="bill-table" class=" bg-slate-50 w-full items-center text-center mb-5">
-                            <!-- row 1 -->
-                            <tr class="text-">
-                                <th>Seat <span id="small-green"
-                                        class="bg-green-500 rounded-lg align-super text-xs px-2">0</span></th>
-                                <th>Class</th>
-                                <th>Price</th>
-                            </tr>
-
+                <div class="flex-row px-5lg:flex">
+                    <div class="w-full lg:w-4/5"> <!--Ticket Table-->
+                        <table class="table w-5/6 justify-center mx-auto">
+                            <!-- head -->
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th class="flex w-[7vw] py-4 mx-4 rounded-xl bg-slate-400">
+                                        <img class="mx-auto scale-150" src="images/wheel.png" alt="">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                    <th>A</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100 ">A1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">A4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 2 -->
+                                <tr>
+                                    <th>B</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">B4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 3 -->
+                                <tr>
+                                    <th>C</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">C4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 4 -->
+                                <tr>
+                                    <th>D</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">D4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 5 -->
+                                <tr>
+                                    <th>E</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">E4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 6 -->
+                                <tr>
+                                    <th>F</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">F4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 7 -->
+                                <tr>
+                                    <th>G</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">G4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 8 -->
+                                <tr>
+                                    <th>H</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">H4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 9 -->
+                                <tr>
+                                    <th>I</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">I4</button>
+                                    </td>
+                                </tr>
+                                <!-- row 10 -->
+                                <tr>
+                                    <th>J</th>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J1</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J2</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J3</button>
+                                    </td>
+                                    <td><button class="seat w-[7vw] py-3 mx-auto rounded-xl bg-slate-100">J4</button>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
-                        <hr class="bg-slate-700 ">
-                    </div> <!--Total-->
-                    <div class="w-full">
-                        <div class="flex justify-between  w-4/5  mx-auto mb-5">
-                            <h1 class="font-extrabold">Total:</h1>
-                            <h2 id="total">0</h2>
+                    </div>
+
+                    <div class="flex-1 flex-row lg:justify-center bg-slate-100 rounded-xl p-10 "> <!--Billing Section-->
+                        <h2 class="text-2xl font-bold mb-5 mx-auto">Select Your Seat</h2>
+                        <div> <!--Bill Table-->
+                            <table id="bill-table" class=" bg-slate-50 w-full items-center text-center mb-5">
+                                <!-- row 1 -->
+                                <tr class="text-">
+                                    <th>Seat <span id="small-green"
+                                            class="bg-green-500 rounded-lg align-super text-xs px-2">0</span></th>
+                                    <th>Class</th>
+                                    <th>Price</th>
+                                </tr>
+
+                            </table>
+                            <hr class="bg-slate-700 ">
+                        </div> <!--Total-->
+                        <div class="w-full">
+                            <div class="flex justify-between  w-4/5  mx-auto mb-5">
+                                <h1 class="font-extrabold">Total:</h1>
+                                <h2 id="total">0</h2>
+                            </div>
+                            <div id="discountBox" class="flex justify-between w-4/5 mx-auto hidden mb-5">
+                                <h1 class="font-extrabold">Discount:</h1>
+                                <h2 id="discount-price">0</h2>
+                            </div>
+
                         </div>
-                        <div id="discountBox" class="flex justify-between w-4/5 mx-auto hidden mb-5">
-                            <h1 class="font-extrabold">Discount:</h1>
-                            <h2 id="discount-price">0</h2>
+                        <div id="couponBox" class="flex bg-white p-1.5 rounded-md w-full mb-5"> <!-- Coupon Section -->
+                            <input id="coupon-field" type="text" placeholder="have any coupon?" class="w-full" disabled>
+                            <button onclick="applyCoupon()" id="apply-btn"
+                                class="bg-green-500 align-middle p-1  rounded-md text-white font-bold">Apply</button>
                         </div>
+                        <div class="flex justify-between  w-4/5  mx-auto mb-5"> <!--Grand Total-->
+                            <h1 class="font-extrabold">Grand Total:</h1>
+                            <h2 id="grand-total">0</h2>
+                        </div>
+                        <form class="flex-row w-full"> <!--Passenger Info-->
+                            <h2>Passenger Name<span class="text-red-500">*</span></h2>
+                            <input id="name" class="w-full p-1 my-1 rounded-md bg-slate-200" type="text"
+                                placeholder="Enter Your Name" required>
 
-                    </div>
-                    <div id="couponBox" class="flex bg-white p-1.5 rounded-md w-full mb-5"> <!-- Coupon Section -->
-                        <input id="coupon-field" type="text" placeholder="have any coupon?" class="w-full" disabled>
-                        <button onclick="applyCoupon()" id="apply-btn"
-                            class="bg-red-500 p-1 rounded-md text-white font-bold">Apply</button>
-                    </div>
-                    <div class="flex justify-between  w-4/5  mx-auto mb-5"> <!--Grand Total-->
-                        <h1 class="font-extrabold">Grand Total:</h1>
-                        <h2 id="grand-total">0</h2>
-                    </div>
-                    <form class="flex-row w-full"> <!--Passenger Info-->
-                        <h2>Passenger Name<span class="text-red-500">*</span></h2>
-                        <input id="name" class="w-full p-1 my-1 rounded-md bg-slate-200" type="text"
-                            placeholder="Enter Your Name" required>
+                            <h2>Phone Number <span class="text-red-500">*</span></h2>
+                            <input id="phone" class="w-full p-1 my-1 rounded-md bg-slate-200" type="number"
+                                placeholder="Enter your phone numbe" required>
 
-                        <h2>Phone Number <span class="text-red-500">*</span></h2>
-                        <input id="phone" class="w-full p-1 my-1 rounded-md bg-slate-200" type="number"
-                            placeholder="Enter your phone numbe" required>
+                            <h2>Email ID<span class="text-red-500">*</span></h2>
+                            <input id="email" class="w-full p-1 my-1 rounded-md bg-slate-200 mb-5" type="email" name=""
+                                placeholder="Enter your email id" required>
 
-                        <h2>Email ID<span class="text-red-500">*</span></h2>
-                        <input id="email" class="w-full p-1 my-1 rounded-md bg-slate-200 mb-5" type="email" name=""
-                            placeholder="Enter your email id" required>
-
-                        <button type="submit" onclick="openModal()"
-                            class="bg-green-500 w-full  rounded-md py-3 text-2xl font-bold text-white">Next</button>
-                        <!--                        
+                            <button type="submit" onclick="openModal()"
+                                class="bg-green-500 w-full  rounded-md py-3 text-2xl font-bold text-white">Next</button>
+                            <!--                        
                         <label for="my_modal_7"  onclick="ticketBooked()"   
                           class="btn bg-green-500 text-center mx-auto w-full text-white text-xl">Place Order</label> -->
-                    </form>
+                        </form>
 
+                    </div>
                 </div>
             </div>
         </section>

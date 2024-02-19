@@ -3,7 +3,8 @@ const new15Rate = document.getElementById('new-15').childNodes[1].childNodes[1].
 const new15Coupon = document.getElementById('new-15').childNodes[3].childNodes[1].innerText;
 const couple20 = document.getElementById('cpl-20').childNodes[1].childNodes[1].childNodes[0].innerText;
 const couple20Coupon = document.getElementById('cpl-20').childNodes[3].childNodes[1].innerText;
-const apply = document.getAnimations('apply-btn')
+const apply = document.getElementById('apply-btn')
+const perTicket = getInnerTextById('per-ticket')
 
 
 
@@ -17,34 +18,35 @@ var seatButtons = document.querySelectorAll(".seat");
 for (seat of seatButtons) {
     const seatNum = seat.innerText;
     seat.addEventListener('click', function () {
-        
+        totalTickets++;
+        ticketLeft--;
         // this.classList.add('bg-green-200');
         // console.log(seat);
         // addItemToBill(seatNum);
-        totalTickets++ 
-        ticketLeft--;
-        console.log(totalTickets);
-
-        if(totalTickets<=4){
+        if (totalTickets <= 4) {
+           
             this.classList.add('bg-green-200');
             addItemToBill(seatNum);
-
-        changeInnerTextByID('small-green', totalTickets)
-        total = total + 550;
-        changeInnerTextByID('total', total);
-        changeInnerTextByID('grand-total', total)
-        changeInnerTextByID('ticket-left', ticketLeft);
-        this.disabled = true;
+            console.log(totalTickets);
+            changeInnerTextByID('small-green', totalTickets)
+            total = totalTickets * perTicket;
+            changeInnerTextByID('total', total);
+            changeInnerTextByID('grand-total', total)
+            changeInnerTextByID('ticket-left', ticketLeft);
+            this.disabled = true;
         }
 
-        if (totalTickets >= 4) {
+        else {
+           alert('You can buy maximum 4 tickets at once!')
+        }
+        if(totalTickets === 4){
             document.getElementById('coupon-field').disabled = false;
         }
-    
+
     }
     )
-    if(totalTickets > 4){
-        seat.removeAttributeByID('click',clickhandler);
+    if (totalTickets > 4) {
+        seat.removeAttributeByID('click', clickhandler);
     }
 }
 
@@ -70,7 +72,7 @@ function applyCoupon() {
         const grand = grandTotal(total, discountPrice)
         changeInnerTextByID('grand-total', grand);
         addAttributeByID('couponBox', 'hidden')
-        
+
     }
     else {
         alert("please enter a valid Coupon")
@@ -102,12 +104,19 @@ function openModal() {
     console.log(phoneInput);
     const emailInput = getValueById('email');
     console.log(emailInput);
-   
-    if (nameInput && phoneInput && emailInput) {
-        console.log("good to go")
-        document.getElementById('my_modal_7').checked = true;
+
+    if (totalTickets >= 1) {
+        if (nameInput && phoneInput && emailInput) {
+            console.log("good to go")
+            document.getElementById('my_modal_7').checked = true;
+        }
+        else{
+            alert('Please fill out the fields')
+        }}
+    else {
+        alert('Please select at least one seat')
     }
- }
+}
 
 
 
@@ -123,7 +132,7 @@ function openModal() {
 
 
 
- // function ticketBooked() {
+// function ticketBooked() {
 //     const nameInput = getValueById('name');
 //     console.log(nameInput);
 //     const phoneInput = getValueById('phone');
@@ -156,4 +165,3 @@ function openModal() {
 
 
 
- 
